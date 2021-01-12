@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    android:fillViewport="true"
+    tools:context=".view.activity.ComicActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent">-->
+<!--            -->
+<!--            <com.google.android.material.appbar.MaterialToolbar-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                app:navigationIcon="back"/>-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+        <ImageView
+            android:id="@+id/ivLandscape"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/raster"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+        <ImageView
+            android:id="@+id/ivCoverBorder"
+            android:layout_width="120dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="150dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivComicCover"
+            android:layout_width="112dp"
+            android:layout_height="172dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/ivCoverBorder"
+            app:layout_constraintEnd_toEndOf="@id/ivCoverBorder"
+            app:layout_constraintStart_toStartOf="@id/ivCoverBorder"
+            app:layout_constraintTop_toTopOf="@id/ivCoverBorder"
+            tools:background="@color/marvel_red" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textAllCaps="true"
+            android:theme="@style/Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivCoverBorder"
+            tools:text="Amazing Spider-Man (2014) #1 (Mhan Variant)" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:theme="@style/Description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Spider-Man continues to pick up the pieces and try to put his life together. But many of the gathering storms are swirling more and more violently... We want to tell you more but it WOULD SPOIL SO MUCH OF LAST REMAINS!!!" />
+        
+        <TextView
+            android:id="@+id/tvPublished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:theme="@style/Description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            android:text="@string/published"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvPublishedContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:theme="@style/Description"
+            app:layout_constraintStart_toEndOf="@id/tvPublished"
+            app:layout_constraintTop_toTopOf="@id/tvPublished"
+            app:layout_constraintBottom_toBottomOf="@id/tvPublished"
+            tools:text="April 30, 2014" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:theme="@style/Description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPublished"
+            android:text="@string/price"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvPriceContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:theme="@style/Description"
+            app:layout_constraintStart_toEndOf="@id/tvPrice"
+            app:layout_constraintTop_toTopOf="@id/tvPrice"
+            app:layout_constraintBottom_toBottomOf="@id/tvPrice"
+            tools:text="$ 5.99" />
+
+        <TextView
+            android:id="@+id/tvPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:theme="@style/Description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPrice"
+            android:text="@string/pages"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvPagesContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:theme="@style/Description"
+            app:layout_constraintStart_toEndOf="@id/tvPages"
+            app:layout_constraintTop_toTopOf="@id/tvPages"
+            app:layout_constraintBottom_toBottomOf="@id/tvPages"
+            tools:text="38" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
