@@ -14,8 +14,6 @@ import com.digitalhousedesafio3.utils.Constants.Api.QUERY_FORMAT_TYPE_VALUE
 import com.digitalhousedesafio3.utils.Constants.Api.QUERY_FORMAT_VALUE
 import com.digitalhousedesafio3.utils.Constants.Api.QUERY_ORDER_BY_NAME
 import com.digitalhousedesafio3.utils.Constants.Api.QUERY_ORDER_BY_VALUE
-import com.digitalhousedesafio3.utils.Constants.Api.QUERY_PARAM_NO_VARIANTS_NAME
-import com.digitalhousedesafio3.utils.Constants.Api.QUERY_PARAM_NO_VARIANTS_VALUE
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -58,7 +56,6 @@ object ApiService {
                     .addQueryParameter(QUERY_FORMAT_TYPE_NAME, QUERY_FORMAT_TYPE_VALUE)
                     .addQueryParameter(QUERY_CHARACTER_NAME, QUERY_CHARACTER_VALUE)
                     .addQueryParameter(QUERY_ORDER_BY_NAME, QUERY_ORDER_BY_VALUE)
-                    .addQueryParameter(QUERY_PARAM_NO_VARIANTS_NAME, QUERY_PARAM_NO_VARIANTS_VALUE)
                     .addQueryParameter(API_KEY_NAME, API_PUBLIC_KEY_VALUE)
                     .build()
                 val newRequest = chain.request().newBuilder().url(url).build()

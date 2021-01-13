@@ -14,10 +14,8 @@ class Constants {
         const val QUERY_FORMAT_TYPE_VALUE = "comic"
         const val QUERY_ORDER_BY_NAME = "orderBy"
         const val QUERY_ORDER_BY_VALUE = "-issueNumber"
-        const val QUERY_PARAM_NO_VARIANTS_NAME = "noVariants"
-        const val QUERY_PARAM_NO_VARIANTS_VALUE = "true"
         const val QUERY_CHARACTER_NAME = "characters"
-        const val QUERY_CHARACTER_VALUE = "1009610"
+        const val QUERY_CHARACTER_VALUE = "1009718"
     }
 
     object Intent {
